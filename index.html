@@ -69,6 +69,10 @@
   .feature-title { font-size: clamp(26px, 6vw, 34px); font-weight: 900; line-height: 1.1; text-transform: uppercase; margin-bottom: 14px; letter-spacing: -0.5px; }
   .feature-desc { font-size: 15px; color: var(--muted); max-width: 420px; margin-bottom: 28px; }
   .feature-img { max-width: 320px; margin: 0 auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); }
+  .glow-orange { background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255,107,0,0.16) 0%, transparent 70%); }
+  .glow-cyan { background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,212,255,0.16) 0%, transparent 70%); }
+  .glow-purple { background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(191,0,255,0.16) 0%, transparent 70%); }
+  .glow-yellow { background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255,229,0,0.16) 0%, transparent 70%); }
 
   /* FEATURE STRIP (icon nav) */
   .strip { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; padding: 24px 20px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -155,7 +159,7 @@
 </div>
 
 <!-- FEATURE: FOCUS -->
-<section class="feature">
+<section class="feature glow-cyan">
   <div class="wrap">
     <div class="feature-tag" style="color:var(--cyan);border-color:rgba(0,212,255,0.3);">⏱️ Pomodoro Tekniği</div>
     <div class="feature-title">25 Dak.<br />Tam <span style="color:var(--cyan);">Odak.</span></div>
@@ -165,7 +169,7 @@
 </section>
 
 <!-- FEATURE: ROUTINES -->
-<section class="feature" style="background:rgba(255,255,255,0.02);">
+<section class="feature glow-purple">
   <div class="wrap">
     <div class="feature-tag" style="color:var(--purple);border-color:rgba(191,0,255,0.3);">🔄 Günlük Rutinler</div>
     <div class="feature-title">Rutin <span style="color:var(--purple);">Değiştirir.</span></div>
@@ -175,7 +179,7 @@
 </section>
 
 <!-- FEATURE: AI COACH -->
-<section class="feature">
+<section class="feature glow-orange">
   <div class="wrap">
     <div class="feature-tag" style="color:var(--orange);border-color:rgba(255,107,0,0.3);">🤖 AI Koç</div>
     <div class="feature-title">AI Koçun<br />Her An <span style="color:var(--orange);">Yanında.</span></div>
@@ -185,7 +189,7 @@
 </section>
 
 <!-- FEATURE: GAMIFICATION -->
-<section class="feature" style="background:rgba(255,255,255,0.02);">
+<section class="feature glow-yellow">
   <div class="wrap">
     <div class="feature-tag" style="color:var(--yellow);border-color:rgba(255,229,0,0.3);">🏆 Gamification</div>
     <div class="feature-title">DEHB Süper <span style="color:var(--yellow);">Güçtür.</span></div>
