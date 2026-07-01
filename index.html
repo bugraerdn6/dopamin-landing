@@ -69,6 +69,14 @@
   .strip { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; padding: 24px 20px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .strip span { font-size: 12px; font-weight: 700; color: var(--muted); background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 8px 16px; border-radius: 50px; }
 
+  /* ICON FEATURE CARDS */
+  .icon-feature-grid { display: flex; flex-direction: column; gap: 14px; max-width: 480px; margin: 0 auto; }
+  .icon-feature-card { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 16px; padding: 20px; text-align: left; }
+  .icon-feature-icon { font-size: 26px; margin-bottom: 10px; }
+  .icon-feature-title { font-weight: 800; font-size: 15px; margin-bottom: 6px; }
+  .icon-feature-text { font-size: 13.5px; color: var(--muted); line-height: 1.55; }
+  .premium-tag { display: inline-block; font-size: 10px; font-weight: 700; color: var(--yellow); background: rgba(255,229,0,0.12); border: 1px solid rgba(255,229,0,0.3); padding: 2px 8px; border-radius: 50px; margin-left: 8px; vertical-align: middle; }
+
   /* PRICING */
   .section-tag { text-align: center; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
   .section-title { text-align: center; font-size: clamp(24px, 6vw, 32px); font-weight: 900; text-transform: uppercase; margin-bottom: 24px; letter-spacing: -0.5px; }
@@ -177,6 +185,26 @@
   </div>
 </section>
 
+<!-- FEATURE: LOCATION + IMPACT -->
+<section class="feature" style="background:rgba(255,255,255,0.02);">
+  <div class="wrap">
+    <div class="section-tag">Daha Fazlası</div>
+    <div class="section-title">Sıradan Bir Görev Listesi Değil</div>
+    <div class="icon-feature-grid">
+      <div class="icon-feature-card">
+        <div class="icon-feature-icon">📍</div>
+        <div class="icon-feature-title">Konum Hatırlatıcı</div>
+        <div class="icon-feature-text">Bir göreve konum ekle — o yere yaklaştığında Dopamin sana haber versin. "🏪 Market'a yakınsın! 2 görev seni bekliyor" gibi.</div>
+      </div>
+      <div class="icon-feature-card">
+        <div class="icon-feature-icon">🌳🐾</div>
+        <div class="icon-feature-title">XP'lerin Gerçek Bağışa Dönüşüyor<span class="premium-tag">PREMIUM</span></div>
+        <div class="icon-feature-text">Biriktirdiğin XP'yi Fidan ve Mama Havuzu'na bağışla. Topluluk hedefine ulaşıldığında TEMA Vakfı aracılığıyla gerçek fidan dikiliyor, sokak hayvanlarına gerçek mama ulaştırılıyor — bağış sertifikaları uygulamada paylaşılacak.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section class="feature">
   <div class="wrap">
@@ -214,7 +242,7 @@
       <div class="bio-photo"><img src="images/bio-photo.jpg" alt="Buğra" /></div>
       <div class="bio-name">Buğra</div>
       <div class="bio-role">Dopamin'in Geliştiricisi</div>
-      <div class="bio-text">Merhaba, ben Buğra 👋 Dopamin'i DEHB'li bireylerin günlük hayatını biraz daha kolaylaştırmak için geliştirdim. Sorularınız ve önerileriniz için Instagram'dan ulaşabilirsiniz.</div>
+      <div class="bio-text">Merhaba, ben Buğra 👋 Dopamin'i DEHB'li bireylerin günlük hayatını biraz daha kolaylaştırmak için tek başıma geliştirdim. Amacım sadece görev takibi yapan bir uygulama değil, gerçek hayatta da iz bırakan bir şey inşa etmekti — bu yüzden kazandığınız XP'ler topluluk gücüyle gerçek fidan ve mama bağışlarına dönüşüyor. Sorularınız, önerileriniz ya da geri bildirimleriniz için Instagram'dan her zaman ulaşabilirsiniz, birebir ben cevap veriyorum.</div>
       <div class="social-row">
         <a href="https://instagram.com/dopamin.dehb" target="_blank" class="social-btn">
           <svg viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
