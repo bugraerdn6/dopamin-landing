@@ -39,10 +39,24 @@
   img { max-width: 100%; display: block; }
   .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
 
-  .hook-bar { background: linear-gradient(90deg, var(--orange), var(--pink)); color: #0a0a0f; text-align: center; padding: 9px 16px; font-size: 12.5px; font-weight: 800; }
-  .hook-bar .wrap { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
-  .hook-arrow { display: inline-block; animation: bounce 1.4s infinite; }
-  @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+  .hook-pill {
+    display: inline-flex; align-items: center; gap: 10px; text-align: left;
+    max-width: 480px; margin: 0 auto 24px;
+    background: rgba(255,255,255,0.05); backdrop-filter: blur(12px);
+    border: 1px solid transparent;
+    background-image: linear-gradient(rgba(20,15,10,0.7), rgba(20,15,10,0.7)), linear-gradient(120deg, var(--orange), var(--pink), var(--purple));
+    background-origin: border-box; background-clip: padding-box, border-box;
+    border-radius: 18px; padding: 12px 18px;
+    box-shadow: 0 8px 32px rgba(255,107,0,0.12);
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+  .hook-pill-emoji { font-size: 20px; flex-shrink: 0; }
+  .hook-pill-text { font-size: 12.5px; line-height: 1.45; color: var(--muted); }
+  .hook-pill-text b { color: white; font-weight: 800; }
+  @keyframes glow-pulse {
+    0%,100% { box-shadow: 0 8px 32px rgba(255,107,0,0.12); }
+    50% { box-shadow: 0 8px 40px rgba(255,0,128,0.22); }
+  }
 
   header { position: sticky; top: 0; z-index: 50; background: rgba(10,10,15,0.9); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 14px 20px; display: flex; align-items: center; justify-content: center; gap: 8px; }
   .logo-text { font-weight: 800; font-size: 18px; color: white; }
@@ -126,10 +140,6 @@
 </head>
 <body>
 
-<div class="hook-bar">
-  <div class="wrap">🧠 DEHB'li bir geliştirici, hiç kod bilmeden sıfırdan öğrenip yaptı. Kazandığın XP'ler gerçek ağaca dönüşüyor 🌳 <span class="hook-arrow">↓</span></div>
-</div>
-
 <header>
   <span class="logo-bolt">⚡</span>
   <span class="logo-text">Dopamin</span>
@@ -138,6 +148,10 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
+    <div class="hook-pill">
+      <span class="hook-pill-emoji">🧠</span>
+      <span class="hook-pill-text">DEHB'li bir geliştirici, hiç kod bilmeden <b>sıfırdan öğrenip</b> yaptı. Kazandığın XP'ler <b>gerçek ağaca</b> dönüşüyor 🌳</span>
+    </div>
     <div class="eyebrow">⚡ DEHB için tasarlandı</div>
     <h1><span class="l1">Odaklan. Tamamla.</span><span class="l2">Kazan.</span></h1>
     <p class="hero-sub">DEHB zihni için tasarlanmış görev yönetimi. Her görevi tamamla, XP kazan, seviye atla.</p>
