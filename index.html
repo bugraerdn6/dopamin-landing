@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dopamin — DEHB için Görev, Odak ve Rutin Uygulaması</title>
+<meta name="description" content="DEHB zihni için tasarlanmış görev yönetimi, Pomodoro odak sistemi, günlük rutinler ve yapay zeka koçu. Dopamin'i App Store'dan indir." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<!--
+  META PIXEL KURULUMU (isteğe bağlı, şimdilik pasif)
+  Kendi Pixel ID'nizi girip bu bloğu saran yorum işaretlerini kaldırın.
+
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'PIXEL_ID_BURAYA');
+  fbq('track', 'PageView');
+  </script>
+-->
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0a0a0f;
+    --yellow: #FFE500; --orange: #FF6B00; --purple: #BF00FF;
+    --cyan: #00D4FF; --green: #00FF88; --pink: #FF0080;
+    --text: #f0eaff; --muted: rgba(240,234,255,0.55); --muted2: rgba(240,234,255,0.35);
+    --border: rgba(255,255,255,0.09);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+
+  header { position: sticky; top: 0; z-index: 50; background: rgba(10,10,15,0.9); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 14px 20px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .logo-text { font-weight: 800; font-size: 18px; color: white; }
+  .logo-bolt { color: var(--yellow); }
+
+  /* HERO */
+  .hero { padding: 48px 20px 40px; text-align: center; background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255,107,0,0.18) 0%, transparent 70%); }
+  .eyebrow { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); background: rgba(255,255,255,0.06); border: 1px solid var(--border); padding: 6px 14px; border-radius: 50px; margin-bottom: 20px; }
+  h1 { font-size: clamp(38px, 11vw, 56px); font-weight: 900; line-height: 1.05; letter-spacing: -1px; margin-bottom: 18px; text-transform: uppercase; }
+  h1 .l1 { color: white; display: block; }
+  h1 .l2 { color: var(--orange); display: block; }
+  .hero-sub { font-size: 16px; color: var(--muted); max-width: 420px; margin: 0 auto 28px; }
+
+  .store-btn { display: inline-flex; align-items: center; gap: 10px; background: white; color: #0a0a0f; padding: 14px 28px; border-radius: 14px; text-decoration: none; font-weight: 700; font-size: 16px; transition: transform .2s; }
+  .store-btn:hover { transform: translateY(-2px); }
+  .store-btn svg { width: 24px; height: 24px; }
+  .store-sub { font-size: 12px; color: var(--muted2); margin-top: 12px; }
+
+  .hero-shot { max-width: 300px; margin: 32px auto 0; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); }
+
+  /* FEATURE SECTIONS */
+  section.feature { padding: 56px 20px; border-top: 1px solid var(--border); }
+  .feature-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px; border-radius: 50px; margin-bottom: 14px; background: rgba(255,255,255,0.06); border: 1px solid var(--border); }
+  .feature-title { font-size: clamp(26px, 6vw, 34px); font-weight: 900; line-height: 1.1; text-transform: uppercase; margin-bottom: 14px; letter-spacing: -0.5px; }
+  .feature-desc { font-size: 15px; color: var(--muted); max-width: 420px; margin-bottom: 28px; }
+  .feature-img { max-width: 320px; margin: 0 auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); }
+
+  /* FEATURE STRIP (icon nav) */
+  .strip { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; padding: 24px 20px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .strip span { font-size: 12px; font-weight: 700; color: var(--muted); background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 8px 16px; border-radius: 50px; }
+
+  /* FINAL CTA */
+  .final { text-align: center; padding: 64px 20px 80px; background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(191,0,255,0.15) 0%, transparent 70%); }
+  .final h2 { font-size: clamp(28px, 7vw, 40px); font-weight: 900; text-transform: uppercase; margin-bottom: 14px; letter-spacing: -0.5px; }
+  .final p { color: var(--muted); margin-bottom: 28px; font-size: 15px; }
+
+  footer { text-align: center; padding: 28px 20px; font-size: 12px; color: var(--muted2); border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="logo-bolt">⚡</span>
+  <span class="logo-text">Dopamin</span>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">⚡ DEHB için tasarlandı</div>
+    <h1><span class="l1">Odaklan. Tamamla.</span><span class="l2">Kazan.</span></h1>
+    <p class="hero-sub">DEHB zihni için tasarlanmış görev yönetimi. Her görevi tamamla, XP kazan, seviye atla.</p>
+    <a href="#" class="store-btn" id="cta-hero">
+      <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+      App Store'dan İndir
+    </a>
+    <div class="store-sub">iOS için ücretsiz · Android çok yakında</div>
+    <div class="hero-shot"><img src="images/feature-1.jpg" alt="Dopamin görev listesi" /></div>
+  </div>
+</section>
+
+<div class="strip">
+  <span>🎯 Görevler</span>
+  <span>⏱️ Odak</span>
+  <span>🔄 Rutinler</span>
+  <span>🤖 AI Koç</span>
+  <span>🏆 Seviyeler</span>
+</div>
+
+<!-- FEATURE: FOCUS -->
+<section class="feature">
+  <div class="wrap">
+    <div class="feature-tag" style="color:var(--cyan);border-color:rgba(0,212,255,0.3);">⏱️ Pomodoro Tekniği</div>
+    <div class="feature-title">25 Dak.<br />Tam <span style="color:var(--cyan);">Odak.</span></div>
+    <div class="feature-desc">Dağılmayı kes. DEHB beyni için özel tasarlanmış odak sistemi ve Hiperfocus Modu ile bildirimler susturulur.</div>
+    <div class="feature-img"><img src="images/feature-2.jpg" alt="Dopamin odak zamanlayıcısı" /></div>
+  </div>
+</section>
+
+<!-- FEATURE: ROUTINES -->
+<section class="feature" style="background:rgba(255,255,255,0.02);">
+  <div class="wrap">
+    <div class="feature-tag" style="color:var(--purple);border-color:rgba(191,0,255,0.3);">🔄 Günlük Rutinler</div>
+    <div class="feature-title">Rutin <span style="color:var(--purple);">Değiştirir.</span></div>
+    <div class="feature-desc">Sabah ve akşam rutinleriyle gününü yapılandır. DEHB ile düzen mümkün.</div>
+    <div class="feature-img"><img src="images/feature-3.jpg" alt="Dopamin günlük rutinler" /></div>
+  </div>
+</section>
+
+<!-- FEATURE: AI COACH -->
+<section class="feature">
+  <div class="wrap">
+    <div class="feature-tag" style="color:var(--orange);border-color:rgba(255,107,0,0.3);">🤖 AI Koç</div>
+    <div class="feature-title">AI Koçun<br />Her An <span style="color:var(--orange);">Yanında.</span></div>
+    <div class="feature-desc">DEHB uzmanı gibi kişisel destek. Motivasyonunu kaybettiğinde o devreye girer.</div>
+    <div class="feature-img"><img src="images/feature-4.jpg" alt="Dopamin AI koç sohbeti" /></div>
+  </div>
+</section>
+
+<!-- FEATURE: GAMIFICATION -->
+<section class="feature" style="background:rgba(255,255,255,0.02);">
+  <div class="wrap">
+    <div class="feature-tag" style="color:var(--yellow);border-color:rgba(255,229,0,0.3);">🏆 Gamification</div>
+    <div class="feature-title">DEHB Süper <span style="color:var(--yellow);">Güçtür.</span></div>
+    <div class="feature-desc">Her tamamlanan görev XP'ye dönüşür. Seviye atla, başarılarını izle.</div>
+    <div class="feature-img"><img src="images/feature-5.jpg" alt="Dopamin seviye ve başarı ekranı" /></div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2>Hazır mısın?</h2>
+    <p>DEHB zihnin için tasarlanmış tek uygulama. Şimdi ücretsiz indir.</p>
+    <a href="#" class="store-btn" id="cta-final">
+      <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+      App Store'dan İndir
+    </a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Dopamin. Tüm hakları saklıdır.
+</footer>
+
+<script>
+  const APP_STORE_LINK = 'https://apps.apple.com/app/id6765635710';
+  ['cta-hero', 'cta-final'].forEach(id => {
+    const el = document.getElementById(id);
+    el.href = APP_STORE_LINK;
+    el.target = '_blank';
+    el.addEventListener('click', () => {
+      try { if (typeof gtag === 'function') gtag('event', 'select_content', { link_id: id }); } catch (e) {}
+      try { if (typeof fbq === 'function') fbq('track', 'InitiateCheckout', { content_name: id }); } catch (e) {}
+    });
+  });
+</script>
+</body>
+</html>
