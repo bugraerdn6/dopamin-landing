@@ -69,6 +69,36 @@
   .strip { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; padding: 24px 20px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .strip span { font-size: 12px; font-weight: 700; color: var(--muted); background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 8px 16px; border-radius: 50px; }
 
+  /* PRICING */
+  .section-tag { text-align: center; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+  .section-title { text-align: center; font-size: clamp(24px, 6vw, 32px); font-weight: 900; text-transform: uppercase; margin-bottom: 24px; letter-spacing: -0.5px; }
+  .pricing-grid { display: flex; flex-direction: column; gap: 14px; max-width: 480px; margin: 0 auto; }
+  .price-card { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 18px; padding: 22px; }
+  .price-card.pro { border-color: rgba(255,229,0,0.4); background: rgba(255,229,0,0.05); }
+  .price-name { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+  .price-cost { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+  .price-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .price-list li { font-size: 13.5px; color: var(--muted); display: flex; gap: 8px; }
+  .price-list li::before { content: '✓'; color: var(--green); font-weight: 700; }
+  .price-card.pro .price-list li::before { color: var(--yellow); }
+
+  /* BIO */
+  .bio-card { max-width: 480px; margin: 0 auto; text-align: center; }
+  .bio-photo { width: 110px; height: 110px; border-radius: 50%; overflow: hidden; margin: 0 auto 16px; border: 2px solid var(--border); }
+  .bio-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .bio-name { font-size: 18px; font-weight: 800; margin-bottom: 2px; }
+  .bio-role { font-size: 12px; color: var(--muted2); margin-bottom: 14px; }
+  .bio-text { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+  .social-row { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+  .social-btn { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid var(--border); padding: 10px 18px; border-radius: 50px; text-decoration: none; color: var(--text); font-size: 13px; font-weight: 600; }
+  .social-btn svg { width: 16px; height: 16px; }
+
+  /* INSTAGRAM CTA */
+  .ig-cta { text-align: center; padding: 48px 20px; background: linear-gradient(135deg, rgba(191,0,255,0.12) 0%, rgba(255,0,128,0.12) 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .ig-cta h3 { font-size: clamp(20px, 5vw, 26px); font-weight: 900; margin-bottom: 10px; text-transform: uppercase; }
+  .ig-cta p { font-size: 14px; color: var(--muted); margin-bottom: 20px; max-width: 380px; margin-left: auto; margin-right: auto; }
+  .ig-btn { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #FF0080, #BF00FF); color: white; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 15px; }
+
   /* FINAL CTA */
   .final { text-align: center; padding: 64px 20px 80px; background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(191,0,255,0.15) 0%, transparent 70%); }
   .final h2 { font-size: clamp(28px, 7vw, 40px); font-weight: 900; text-transform: uppercase; margin-bottom: 14px; letter-spacing: -0.5px; }
@@ -147,6 +177,70 @@
   </div>
 </section>
 
+<!-- PRICING -->
+<section class="feature">
+  <div class="wrap">
+    <div class="section-tag">Ücretsiz mi, Premium mi?</div>
+    <div class="section-title">Sana Uygun Planı Seç</div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-name">Ücretsiz</div>
+        <div class="price-cost">Her zaman ücretsiz</div>
+        <ul class="price-list">
+          <li>5 aktif göreve kadar</li>
+          <li>3 rutine kadar</li>
+          <li>Temel istatistikler</li>
+        </ul>
+      </div>
+      <div class="price-card pro">
+        <div class="price-name">⚡ Premium</div>
+        <div class="price-cost">₺149,99/ay · veya ₺1.499,99/yıl (%17 tasarruf)</div>
+        <ul class="price-list">
+          <li>Sınırsız görev ve rutin</li>
+          <li>AI Koç</li>
+          <li>Fidan Havuzu</li>
+          <li>Mama Havuzu</li>
+          <li>Detaylı istatistikler</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="feature" style="background:rgba(255,255,255,0.02);">
+  <div class="wrap">
+    <div class="bio-card">
+      <div class="bio-photo"><img src="images/bio-photo.jpg" alt="Buğra" /></div>
+      <div class="bio-name">Buğra</div>
+      <div class="bio-role">Dopamin'in Geliştiricisi</div>
+      <div class="bio-text">Merhaba, ben Buğra 👋 Dopamin'i DEHB'li bireylerin günlük hayatını biraz daha kolaylaştırmak için geliştirdim. Sorularınız ve önerileriniz için Instagram'dan ulaşabilirsiniz.</div>
+      <div class="social-row">
+        <a href="https://instagram.com/dopamin.dehb" target="_blank" class="social-btn">
+          <svg viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+          @dopamin.dehb
+        </a>
+        <a href="https://instagram.com/who.bugr6" target="_blank" class="social-btn">
+          <svg viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+          @who.bugr6
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM CTA -->
+<section class="ig-cta">
+  <div class="wrap">
+    <h3>Sorunuz mu var?</h3>
+    <p>Uygulama hakkında merak ettiklerinizi Instagram'dan direkt yazın, size dönüş yapalım.</p>
+    <a href="#" class="ig-btn" id="cta-ig">
+      <svg viewBox="0 0 448 512" width="18" height="18" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+      Instagram'dan Yaz
+    </a>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="final">
   <div class="wrap">
@@ -165,6 +259,8 @@
 
 <script>
   const APP_STORE_LINK = 'https://apps.apple.com/app/id6765635710';
+  const INSTAGRAM_DM_LINK = 'https://ig.me/m/dopamin.dehb';
+
   ['cta-hero', 'cta-final'].forEach(id => {
     const el = document.getElementById(id);
     el.href = APP_STORE_LINK;
@@ -173,6 +269,14 @@
       try { if (typeof gtag === 'function') gtag('event', 'select_content', { link_id: id }); } catch (e) {}
       try { if (typeof fbq === 'function') fbq('track', 'InitiateCheckout', { content_name: id }); } catch (e) {}
     });
+  });
+
+  const igEl = document.getElementById('cta-ig');
+  igEl.href = INSTAGRAM_DM_LINK;
+  igEl.target = '_blank';
+  igEl.addEventListener('click', () => {
+    try { if (typeof gtag === 'function') gtag('event', 'generate_lead', { link_id: 'cta-ig' }); } catch (e) {}
+    try { if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'instagram-dm' }); } catch (e) {}
   });
 </script>
 </body>
