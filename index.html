@@ -179,11 +179,15 @@ src="https://www.facebook.com/tr?id=2011095216198583&ev=PageView&noscript=1"
 
   /* BIO */
   .bio-card { max-width: 480px; margin: 0 auto; text-align: center; }
-  .bio-photo { width: 110px; height: 110px; border-radius: 50%; overflow: hidden; margin: 0 auto 16px; border: 2px solid var(--border); }
-  .bio-photo img { width: 100%; height: 100%; object-fit: cover; }
-  .bio-name { font-size: 18px; font-weight: 800; margin-bottom: 2px; }
-  .bio-role { font-size: 12px; color: var(--muted2); margin-bottom: 14px; }
-  .bio-text { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+  .bio-photo { width: 140px; height: 140px; border-radius: 50%; margin: 0 auto 16px; padding: 3px; background: linear-gradient(135deg, var(--orange), var(--purple), var(--cyan)); box-sizing: border-box; }
+  .bio-photo img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; border: 3px solid var(--bg); box-sizing: border-box; }
+  .bio-name { font-size: 20px; font-weight: 800; margin-bottom: 2px; }
+  .bio-role { font-size: 12px; color: var(--muted2); margin-bottom: 16px; }
+  .bio-journey { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+  .bio-journey-pill { font-size: 11px; font-weight: 700; padding: 5px 11px; border-radius: 50px; background: rgba(255,255,255,0.06); border: 1px solid var(--border); color: var(--muted); white-space: nowrap; }
+  .bio-journey-pill.pill-highlight { background: rgba(255,107,0,0.15); border-color: rgba(255,107,0,0.4); color: var(--orange); }
+  .bio-journey-arrow { color: var(--muted2); font-size: 12px; }
+  .bio-text { font-size: 14px; color: var(--muted); margin-bottom: 20px; text-align: left; }
   .social-row { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
   .social-btn { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid var(--border); padding: 10px 18px; border-radius: 50px; text-decoration: none; color: var(--text); font-size: 13px; font-weight: 600; }
   .social-btn svg { width: 16px; height: 16px; }
@@ -408,8 +412,19 @@ src="https://www.facebook.com/tr?id=2011095216198583&ev=PageView&noscript=1"
     <div class="bio-card">
       <div class="bio-photo"><img src="images/bio-photo.jpg" alt="Buğra" /></div>
       <div class="bio-name">Buğra</div>
-      <div class="bio-role">Dopamin'in Geliştiricisi</div>
-      <div class="bio-text">Merhaba, ben Buğra 👋 Ben de DEHB'liyim. Aradığım gibi bir uygulama bulamayınca, hiç kod bilmediğim halde sıfırdan öğrenerek Dopamin'i geliştirdim. Amacım sadece görev takibi yapan bir uygulama değil, gerçek hayatta da iz bırakan bir şey inşa etmekti — bu yüzden kazandığınız XP'ler topluluk gücüyle gerçek fidan ve mama bağışlarına dönüşüyor. Sorularınız, önerileriniz ya da geri bildirimleriniz için Instagram'dan her zaman ulaşabilirsiniz, birebir ben cevap veriyorum.</div>
+      <div class="bio-role">28 yaşında DEHB tanısı aldı · Dopamin'in Kurucusu</div>
+      <div class="bio-journey">
+        <span class="bio-journey-pill">Fizyoterapi</span>
+        <span class="bio-journey-arrow">→</span>
+        <span class="bio-journey-pill">İlaç Mümessilliği</span>
+        <span class="bio-journey-arrow">→</span>
+        <span class="bio-journey-pill">Galericilik</span>
+        <span class="bio-journey-arrow">→</span>
+        <span class="bio-journey-pill">Doğalgaz</span>
+        <span class="bio-journey-arrow">→</span>
+        <span class="bio-journey-pill pill-highlight">🚀 Dopamin</span>
+      </div>
+      <div class="bio-text">Merhaba, ben Buğra 👋 28 yaşında DEHB tanısı aldım ama aslında hep hissediyordum: fizyoterapi okudum, ilaç mümessilliği yaptım, galericilik yaptım, doğalgaz sektöründe çalıştım — her birini öğrenip bir süre sonra dopaminim düşünce bırakıyordum, hiçbir şeye uzun süre odaklanamıyordum. Unutmamak ve planlamak için DEHB'ye özel bir uygulama aradım, bulamayınca "neden ben yapmıyorum" dedim ve hiç kod bilmeden sıfırdan öğrenerek Dopamin'i geliştirdim. Bugün 29 yaşındayım; network marketing, dijital pazarlama ve sosyal medya ile uğraşıyorum, yarı zamanlı DJ'lik de yapıyorum. Amacım sadece görev takibi yapan bir uygulama değil, gerçek hayatta da iz bırakan bir şey inşa etmekti — bu yüzden kazandığınız XP'ler topluluk gücüyle gerçek fidan ve mama bağışlarına dönüşüyor. Sorularınız, önerileriniz ya da geri bildirimleriniz için Instagram'dan her zaman ulaşabilirsiniz, birebir ben cevap veriyorum.</div>
       <div class="social-row">
         <a href="https://instagram.com/dopamin.dehb" target="_blank" class="social-btn">
           <svg viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
